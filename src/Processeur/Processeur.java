@@ -14,7 +14,11 @@ import java.awt.event.ActionListener;
  */
 public class Processeur {
     
-    private Fenetre screen= new Fenetre();
+    private Fenetre screen;
+    
+    public Processeur(){
+        screen = new Fenetre();
+    }
     
   
     
