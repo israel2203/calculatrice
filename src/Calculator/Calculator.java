@@ -6,7 +6,7 @@
 package Calculator;
 
 import Interface.Fenetre;
-import Processeur.Processeur;
+import Processeur.processeur;
 
 /**
  *
@@ -20,7 +20,7 @@ public class Calculator {
     public static void main(String[] args) {
         // TODO code application logic here
         Fenetre fenetre= new Fenetre();
-        Processeur processeur= new Processeur();
+        processeur processeur= new processeur();
        
         
     }
