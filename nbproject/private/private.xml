@@ -3,9 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/israel/NetBeansProjects/Calculator/src/Interface/Fenetre.java</file>
-            <file>file:/home/israel/NetBeansProjects/Calculator/src/Processeur/Processeur.java</file>
-            <file>file:/home/israel/NetBeansProjects/Calculator/src/Calculator/Calculator.java</file>
+            <file>file:/home/israel/NetBeansProjects/Calculate/calculatrice/src/Calculator/Calculator.java</file>
+            <file>file:/home/israel/NetBeansProjects/Calculate/calculatrice/src/Interface/Fenetre.java</file>
+            <file>file:/home/israel/NetBeansProjects/Calculate/calculatrice/src/Processeur/processeur.java</file>
         </group>
     </open-files>
 </project-private>

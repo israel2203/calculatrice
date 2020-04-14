@@ -33,7 +33,7 @@ public class Fenetre extends javax.swing.JFrame {
         one = new javax.swing.JButton();
         two = new javax.swing.JButton();
         three = new javax.swing.JButton();
-        plus = new javax.swing.JButton();
+        annuler = new javax.swing.JButton();
         four = new javax.swing.JButton();
         five = new javax.swing.JButton();
         six = new javax.swing.JButton();
@@ -42,52 +42,59 @@ public class Fenetre extends javax.swing.JFrame {
         eight = new javax.swing.JButton();
         nine = new javax.swing.JButton();
         multiplication = new javax.swing.JButton();
-        point = new javax.swing.JButton();
+        plus = new javax.swing.JButton();
         zero = new javax.swing.JButton();
         equal = new javax.swing.JButton();
-        division = new javax.swing.JButton();
+        egale = new javax.swing.JButton();
         screen = new javax.swing.JTextField();
+        division = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        one.setText("jButton1");
+        one.setText("1");
 
-        two.setText("jButton2");
+        two.setText("2");
         two.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 twoActionPerformed(evt);
             }
         });
 
-        three.setText("jButton3");
+        three.setText("3");
 
-        plus.setText("jButton4");
+        annuler.setText("C");
 
-        four.setText("jButton5");
+        four.setText("4");
 
-        five.setText("jButton6");
+        five.setText("5");
 
-        six.setText("jButton7");
+        six.setText("6");
 
-        minus.setText("jButton8");
+        minus.setText("-");
 
-        seven.setText("jButton9");
+        seven.setText("7");
 
-        eight.setText("jButton10");
+        eight.setText("8");
 
-        nine.setText("jButton11");
+        nine.setText("9");
 
-        multiplication.setText("jButton12");
+        multiplication.setText("*");
 
-        point.setText("jButton13");
+        plus.setText("+");
 
-        zero.setText("jButton14");
+        zero.setText("0");
 
         equal.setText("jButton15");
 
-        division.setText("jButton16");
+        egale.setText("=");
 
-        screen.setText("jTextField1");
+        screen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                screenActionPerformed(evt);
+            }
+        });
+
+        division.setText("/");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -96,56 +103,59 @@ public class Fenetre extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(screen)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(plus, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                            .addComponent(eight, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(four, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(one, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(two, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(five, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(three, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                                    .addComponent(six, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(nine, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(egale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(seven)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(nine, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(four)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(five)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(six))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(equal, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(division, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(multiplication, javax.swing.GroupLayout.PREFERRED_SIZE, 1, Short.MAX_VALUE)
-                                    .addComponent(minus, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(division, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                                .addComponent(equal, javax.swing.GroupLayout.PREFERRED_SIZE, 1, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(one)
-                                .addGap(12, 12, 12)
-                                .addComponent(two)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(three)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(plus)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(screen, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(minus, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(annuler, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(multiplication, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(screen, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(45, 45, 45)
+                .addComponent(screen, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(one)
                     .addComponent(two)
                     .addComponent(three)
-                    .addComponent(plus))
+                    .addComponent(annuler))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(four)
@@ -160,9 +170,10 @@ public class Fenetre extends javax.swing.JFrame {
                     .addComponent(multiplication))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(point)
+                    .addComponent(plus)
                     .addComponent(zero)
                     .addComponent(equal)
+                    .addComponent(egale)
                     .addComponent(division))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -173,6 +184,10 @@ public class Fenetre extends javax.swing.JFrame {
     private void twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_twoActionPerformed
+
+    private void screenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_screenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_screenActionPerformed
 
     /**
      * @param args the command line arguments
@@ -210,12 +225,28 @@ public class Fenetre extends javax.swing.JFrame {
         });
     }
 
+    public JButton getAnnuler() {
+        return annuler;
+    }
+
+    public void setAnnuler(JButton annuler) {
+        this.annuler = annuler;
+    }
+
     public JButton getDivision() {
         return division;
     }
 
     public void setDivision(JButton division) {
         this.division = division;
+    }
+
+    public JButton getEgale() {
+        return egale;
+    }
+
+    public void setEgale(JButton egale) {
+        this.egale = egale;
     }
 
     public JButton getEight() {
@@ -290,14 +321,6 @@ public class Fenetre extends javax.swing.JFrame {
         this.plus = plus;
     }
 
-    public JButton getPoint() {
-        return point;
-    }
-
-    public void setPoint(JButton point) {
-        this.point = point;
-    }
-
     public JTextField getScreen() {
         return screen;
     }
@@ -345,9 +368,13 @@ public class Fenetre extends javax.swing.JFrame {
     public void setZero(JButton zero) {
         this.zero = zero;
     }
+
+    
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton annuler;
     private javax.swing.JButton division;
+    private javax.swing.JButton egale;
     private javax.swing.JButton eight;
     private javax.swing.JButton equal;
     private javax.swing.JButton five;
@@ -357,7 +384,6 @@ public class Fenetre extends javax.swing.JFrame {
     private javax.swing.JButton nine;
     private javax.swing.JButton one;
     private javax.swing.JButton plus;
-    private javax.swing.JButton point;
     private javax.swing.JTextField screen;
     private javax.swing.JButton seven;
     private javax.swing.JButton six;
