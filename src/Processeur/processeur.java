@@ -19,7 +19,7 @@ public class processeur implements ActionListener {
     private String valeur1="";
     private String valeur2="";
     private Character operateur=0;
-    private int resultat;
+    private double resultat;
     
     public processeur(Fenetre screen){
         this.screen = screen;
@@ -41,6 +41,11 @@ public class processeur implements ActionListener {
        screen.getDivision().addActionListener(this);
        screen.getEgale().addActionListener(this);
        screen.getAnnuler().addActionListener(this);
+       screen.getPoint().addActionListener(this);
+       screen.getDelete().addActionListener(this);
+       screen.getNegative_sign().addActionListener(this);
+       screen.getPercentage().addActionListener(this);
+       screen.getSquare_root().addActionListener(this);
         
     }
 
@@ -148,6 +153,16 @@ public class processeur implements ActionListener {
                 valeur2=valeur2+"0";
                 screen.getScreen().setText(valeur2);
             }
+              
+        } if(e.getSource()== screen.getPoint()){
+            if(operateur==0){
+                valeur1=valeur1+".";
+                screen.getScreen().setText(valeur1);
+            }
+            else{
+                valeur2=valeur2+".";
+                screen.getScreen().setText(valeur2);
+            }
             
         }
 //      Getting the input number
@@ -173,9 +188,9 @@ public class processeur implements ActionListener {
 
 //      Making the calculation
         if(e.getSource()== screen.getEgale()){  
-            int v1,v2;
-            v1=Integer.parseInt(valeur1);
-            v2=Integer.parseInt(valeur2);
+            double v1,v2;
+            v1=Double.parseDouble(valeur1);
+            v2=Double.parseDouble(valeur2);
             switch(operateur){
                 case 43:
                          resultat=v1+v2;
@@ -189,17 +204,53 @@ public class processeur implements ActionListener {
                 case 47:
                          resultat=v1/v2;
                          break;
-                 
             }
+             int integerpart=(int)resultat;
+             double netresult= integerpart-resultat;
+            if(netresult==0.0){
+            screen.getScreen().setText(" "+integerpart);
+        }else{
             screen.getScreen().setText(" "+resultat);
+            }
+            valeur1="";
+            valeur2="";
+            operateur=0;
+            
         }
 //      Making the calculation
-    
-       if(e.getSource()==screen.getAnnuler()){ 
+//     Special Buttons
+     if(e.getSource()==screen.getSquare_root()){
+          double v1=Double.parseDouble(valeur1);
+          double result=Math.sqrt(v1);
+             valeur1=" "+result;
+            int integerpart=(int)result;
+             double netresult= integerpart-result;
+            if(netresult==0.0){
+            screen.getScreen().setText(" "+integerpart);
+        }else{
+            screen.getScreen().setText(" "+result);
+            }
+           if(operateur!=0){
+               double v2=Double.parseDouble(valeur2);
+               result=Math.sqrt(v2);
+               valeur2=" "+result;
+               integerpart=(int)result;
+             netresult= integerpart-result;
+            if(netresult==0.0){
+            screen.getScreen().setText(" "+integerpart);
+           }
+           }
+           }
+//     Special buttons
+//    Cancelling the operation
+      if(e.getSource()==screen.getAnnuler()){ 
           valeur1="";
           valeur2="";
+          operateur=0;
          screen.getScreen().setText("");
          
        }
+//    Cancelling the operation
+
     }
 }
