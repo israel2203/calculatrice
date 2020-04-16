@@ -34,7 +34,6 @@ public class processeur implements ActionListener {
        screen.getEight().addActionListener(this);
        screen.getNine().addActionListener(this);
        screen.getZero().addActionListener(this);
-//       screen.getPoint().addActionListener(this);
        screen.getPlus().addActionListener(this);
        screen.getMinus().addActionListener(this);
        screen.getMultiplication().addActionListener(this);
@@ -186,7 +185,7 @@ public class processeur implements ActionListener {
         }
 //      Getting the entered operator
 
-//      Making the calculation
+//      doing the calculation
         if(e.getSource()== screen.getEgale()){  
             double v1,v2;
             v1=Double.parseDouble(valeur1);
@@ -217,31 +216,69 @@ public class processeur implements ActionListener {
             operateur=0;
             
         }
-//      Making the calculation
-//     Special Buttons
+//      doing the calculation
+//    The Square Root
      if(e.getSource()==screen.getSquare_root()){
-          double v1=Double.parseDouble(valeur1);
-          double result=Math.sqrt(v1);
+          int integerpart;
+          double netresult;
+          double result;
+          double v1,v2;
+         if(operateur==0){
+           v1=Double.parseDouble(valeur1);
+            result=Math.sqrt(v1);
              valeur1=" "+result;
-            int integerpart=(int)result;
-             double netresult= integerpart-result;
+            integerpart =(int)result;
+             netresult= integerpart-result;
             if(netresult==0.0){
             screen.getScreen().setText(" "+integerpart);
         }else{
             screen.getScreen().setText(" "+result);
             }
-           if(operateur!=0){
-               double v2=Double.parseDouble(valeur2);
+         }else{
+                v2=Double.parseDouble(valeur2);
                result=Math.sqrt(v2);
                valeur2=" "+result;
-               integerpart=(int)result;
-             netresult= integerpart-result;
+              integerpart=(int)result;
+               netresult= integerpart-result;
             if(netresult==0.0){
             screen.getScreen().setText(" "+integerpart);
+           }else{
+            screen.getScreen().setText(" "+result);
+            }
            }
            }
+//    The Square Root
+
+//          The Delete button
+     if(e.getSource()==screen.getDelete()){
+         if(operateur==0){
+            valeur1 = valeur1.substring(0, valeur1.length()-1); 
+            screen.getScreen().setText(valeur1);
+         }else{
+             valeur2 = valeur2.substring(0, valeur2.length()-1);
+              screen.getScreen().setText(valeur2);
+         }
+         
+     }
+//          The delete button
+
+//          The Negative Sign
+       if(e.getSource()==screen.getNegative_sign()){
+           long v1;
+           if(operateur==0){
+               v1=Long.parseLong(valeur1);
+               v1=Math.negateExact(v1);
+               valeur1=" "+v1;
+               screen.getScreen().setText(valeur1);
+           }else{
+                v1=Long.parseLong(valeur2);
+               v1=Math.negateExact(v1);
+               valeur2=" "+v1;
+               screen.getScreen().setText(valeur2);
+               
            }
-//     Special buttons
+       }
+//          The Negative Sign
 //    Cancelling the operation
       if(e.getSource()==screen.getAnnuler()){ 
           valeur1="";
