@@ -211,7 +211,7 @@ public class processeur implements ActionListener {
         }else{
             screen.getScreen().setText(" "+resultat);
             }
-            valeur1="";
+            valeur1=" "+resultat;
             valeur2="";
             operateur=0;
             
@@ -265,7 +265,7 @@ public class processeur implements ActionListener {
 //          The Negative Sign
        if(e.getSource()==screen.getNegative_sign()){
            long v1;
-           if(operateur==0){
+           if(operateur==0){ 
                v1=Long.parseLong(valeur1);
                v1=Math.negateExact(v1);
                valeur1=" "+v1;
@@ -279,6 +279,24 @@ public class processeur implements ActionListener {
            }
        }
 //          The Negative Sign
+
+//        The Percentage
+       if(e.getSource()==screen.getPercentage()){
+           double v1;
+           if(operateur==0){
+               v1=Double.parseDouble(valeur1);
+               v1=v1/100;
+               valeur1=" "+v1;
+                screen.getScreen().setText(valeur1);
+           }else{
+               v1=Double.parseDouble(valeur2);
+               v1=v1/100;
+               valeur2=" "+v1; 
+                screen.getScreen().setText(valeur2);
+           }
+       }
+//        The Percentage
+
 //    Cancelling the operation
       if(e.getSource()==screen.getAnnuler()){ 
           valeur1="";
